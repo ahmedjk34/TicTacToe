@@ -72,3 +72,33 @@ main{
   background-color: peachpuff;
   border:1px solid black
 }
+/*Footer*/
+footer{
+  display: flex;
+  color: white;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.score {
+  background: black;
+  height: min(3rem , 5vh);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: min(10rem ,25vw);
+  border-radius: 0.4rem;
+  border: none;
+}
+.score > p{
+  margin-left:0.5rem;
+}
+footer button {
+  color: inherit;
+  font-family: inherit;
+  background-color: black;
+  border-radius: 0.5rem;
+  width: min(6rem ,15vw);
+  height: min(3rem , 5vh);
+}
