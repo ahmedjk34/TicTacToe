@@ -1,7 +1,7 @@
 
 //popUp functionality 
 const popUp_appearance = (function () { 
-const popup = document.querySelector(".popup");
+    const popup = document.querySelector(".popup");
 const player2_form = document.querySelector('.player2')
     const popUpAppearance  = () => {
         popup.setAttribute("style", "visibility: visible;");
@@ -46,14 +46,32 @@ function startPreparation () {
    player2ScoreHolder.lastChild.textContent = 0;
    //The span element ^^
 }
-const checker = (array = []  , index) => {
-console.log(array)
+let ch1 = false;
+
+const checker = (array = [] , index) => {
+const newArray = array.filter(value => value >= 0)
+const winConditions = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8], //[0,3,1,2]
+    [2, 4, 6],]
+    const player1ScoreHolder = document.querySelector(".player1Score");
+    const player2ScoreHolder = document.querySelector(".player2Score"); 
+   winConditions.forEach((value  , index , array) =>{
+    //reset  
+   
+   })
+   
 }
 
 const gameBoard = (function () {
  //board input saving
- const boardx = [];
- const boardo = [];
+ const boardX = [];
+ const boardO = [];
  //data entering 
  const cards = document.querySelectorAll(".card");
  let counter = 0;
@@ -66,22 +84,29 @@ const gameBoard = (function () {
                 || counter == 6 || counter ==8)
                 {
                     value.textContent = "X";
-                    boardx[counter] = index;
+                    boardX[counter] = index;
                     counter ++;
-                    console.log(boardx)
-
+                    checker(boardX)
                 }
            else {
                     value.textContent = "O";
-                    boardo[counter] = index;
+                    boardO[counter] = index;
                     counter ++;
-                    console.log(boardo)
-                 
+                    checker(boardO)
                     }
         }
     })
  })
-})();
+  //reset
+  const reset = ()=>{
+    cards.forEach(value => value.textContent ="")
+  }
+  const hardReset = ()=> {
+    cards.forEach(value => value.textContent ="")  
+}
+  return {reset}
+}
+)();
 const play = document.getElementById("play");
 play.addEventListener('click' , (event) => {
    startPreparation();
