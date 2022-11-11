@@ -69,9 +69,6 @@ const gameBoard = (function () {
                     boardx[counter] = index;
                     counter ++;
                     console.log(boardx)
-                    boardx.filter (value => {
-                        return value != undefined;
-                    })
 
                 }
            else {
@@ -79,9 +76,7 @@ const gameBoard = (function () {
                     boardo[counter] = index;
                     counter ++;
                     console.log(boardo)
-                    boardo.filter (value => {
-                        return value == undefined;
-                    })
+                 
                     }
         }
     })
