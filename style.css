@@ -40,9 +40,14 @@ header button {
   color: inherit;
   font-family: inherit;
   background-color: black;
+  border: none;
   border-radius: 0.5rem;
   width: min(6rem ,15vw);
   height: min(3rem , 5vh);
+}
+button:hover{
+  cursor: pointer;
+  background-color: rgb(24, 23, 23);
 }
 header h1:hover {
     background: rgb(31,36,0);
@@ -83,22 +88,84 @@ footer{
 }
 .score {
   background: black;
-  height: min(3rem , 5vh);
+  height: min(10rem , 10vh);
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
-  width: min(10rem ,25vw);
+  padding: 0.6rem;
+  width: min(20rem ,30vw);
   border-radius: 0.4rem;
   border: none;
 }
 .score > p{
   margin-left:0.5rem;
 }
+.score > div {
+  display: flex;
+  gap: 10px;
+}
 footer button {
   color: inherit;
   font-family: inherit;
   background-color: black;
   border-radius: 0.5rem;
+  border: none;
   width: min(6rem ,15vw);
   height: min(3rem , 5vh);
+}
+/*PopUp*/
+.popup{
+  position: absolute;
+  background: rgb(31,36,0);
+  background: linear-gradient(276deg, rgba(31,36,0,1) 0%, rgba(121,117,9,1) 0%, rgba(0,255,4,1) 100%);
+  height: 60vh;
+  width: 60vw;
+  font-family: 'Roboto Condensed', sans-serif;
+  border: 2px solid black;
+  border-radius: 1rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  visibility: hidden;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+form > div{
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap:5px;
+}
+form input {
+  width: 80%;
+  height: 30%;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  outline: none;
+}
+form button {
+  color: white;
+  font-family: inherit;
+  background-color: black;
+  border-radius: 0.5rem;
+  border: none;
+  width: 30%;
+  height: 15%;
+}
+/*Disable a button*/
+.disabled{
+  pointer-events: none;
 }

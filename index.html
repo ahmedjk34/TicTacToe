@@ -8,12 +8,25 @@
   <title>Document</title>
 </head>
 <body>
+<div class="popup">
+  <form>
+   <div class="player1">
+    <h3>Player1</h3>
+    <input type="text" name="player1_name" id="player1_name" placeholder="Name">
+   </div>
+   <div class="player2">
+    <h3>Player2</h3>
+    <input type="text" name="player2_name" id="player2_name" placeholder="Name">
+   </div>
+   <button type="button" id="play">Play</button>
+  </form>
+</div>
 <div class="page-container">
  <header>
   <h1>Tik Tac Toe</h1>
   <div class="header_buttons">
-   <button id="player1_button">1 Player</button>
-   <button id="player2_button">2 Players</button>
+   <button id="player1_button" class="">1 Player</button>
+   <button id="player2_button" class="">2 Players</button>
   </div>
  </header>
  <main>
@@ -34,6 +47,8 @@
   <!--Score Counter-->   
   <div class="score">
     <p>Score:</p>
+    <div class="player1Score"><p></p><span></span></div>
+    <div class="player2Score"><p></p><span></span></div>
   </div>
  </footer>
 </div>
